@@ -12,7 +12,10 @@ function BucketForm(props) {
     if (!eagerness) {
       setEagerness('low');
     }
-
+    if (!input) {
+      alert('You must include text for your bucket list item.')
+      return
+    }
     props.onSubmit({
       id: Math.random().toString(),
       text: input,
